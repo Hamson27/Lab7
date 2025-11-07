@@ -7,11 +7,19 @@ public class ResidentialSite extends Site{
         _units = 10;
         _rate = 1.5;
     }
+    
+    
 
     public double getBillableAmount(){
-        double base = _units * _rate;
+        double base = getBaseAmount();
         double rate = base * Site.TAX_RATE;
         return base + rate;
+    }
+
+    @Override
+    public double getBaseAmount() {
+        double base = _units * _rate;
+        return base;
     }
 
     public static void main(String[] args) {

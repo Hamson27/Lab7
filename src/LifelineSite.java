@@ -9,9 +9,14 @@ public class LifelineSite extends Site{
     }
 
     public double getBillableAmount(){
-        double base = _units * _rate * 0.5;
+        double base = getBaseAmount();
         double rate = base * Site.TAX_RATE * 0.2;
         return base + rate;
+    }
+
+    @Override
+    public double getBaseAmount() {
+        return _units * _rate * 0.5;
     }
 
     public static void main(String[] args) {
