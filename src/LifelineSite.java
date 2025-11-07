@@ -1,11 +1,9 @@
 public class LifelineSite extends Site{
-    private int _units;
-    private double _rate;
+    private static final int _units = 10;
+    private static final double _rate = 2.5;
 
     public LifelineSite(){
         super();
-        _units = 10;
-        _rate = 2.5;
     }
 
     public double getTaxAmount() {

@@ -1,13 +1,10 @@
 public class ResidentialSite extends Site{
-    private int _units;
-    private double _rate;
+    private static final int _units = 10;
+    private static final double _rate = 1.5;
 
     public ResidentialSite(){
         super();
-        _units = 10;
-        _rate = 1.5;
     }
-
 
     public double getTaxAmount() {
         return getBaseAmount() * Site.TAX_RATE;
